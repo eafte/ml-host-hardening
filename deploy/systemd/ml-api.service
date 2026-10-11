@@ -1,0 +1,15 @@
+[Unit]
+Description=ML inference API
+After=network.target
+
+[Service]
+User=mlapi
+Group=mlapi
+EnvironmentFile=/etc/ml-api/ml-api.env
+WorkingDirectory=/opt/ml-api
+ExecStart=/opt/ml-api/.venv/bin/uvicorn app.main:create_app --factory --host 127.0.0.1 --port 8000
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
