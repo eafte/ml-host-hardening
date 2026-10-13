@@ -1,0 +1,13 @@
+--- /root/ufw-sysctl.conf.orig	2026-10-13 20:19:18.131025196 +0000
++++ /etc/ufw/sysctl.conf	2026-10-13 20:19:23.584025362 +0000
+@@ -26,8 +26,8 @@
+ 
+ # Don't log Martian Packets (impossible addresses)
+ # packets
+-net/ipv4/conf/all/log_martians=0
+-net/ipv4/conf/default/log_martians=0
++net/ipv4/conf/all/log_martians=1
++net/ipv4/conf/default/log_martians=1
+ 
+ #net/ipv4/tcp_fin_timeout=30
+ #net/ipv4/tcp_keepalive_intvl=1800

@@ -1,0 +1,10 @@
+[DEFAULT]
+ignoreip = 127.0.0.1/8 ::1 192.168.56.1
+bantime = 1h
+findtime = 10m
+maxretry = 3
+
+[sshd]
+enabled = true
+backend = systemd
+mode = aggressive
