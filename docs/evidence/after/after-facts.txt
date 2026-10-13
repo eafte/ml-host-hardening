@@ -1,0 +1,31 @@
+== listeners ==
+State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess                                                
+LISTEN 0      4096   127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=533,fd=15))             
+LISTEN 0      2048       127.0.0.1:8000      0.0.0.0:*    users:(("uvicorn",pid=2255,fd=6))                     
+LISTEN 0      511          0.0.0.0:80        0.0.0.0:*    users:(("nginx",pid=867,fd=5),("nginx",pid=866,fd=5)) 
+LISTEN 0      4096         0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=905,fd=3),("systemd",pid=1,fd=104))
+LISTEN 0      4096      127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=533,fd=17))             
+LISTEN 0      4096            [::]:22           [::]:*    users:(("sshd",pid=905,fd=4),("systemd",pid=1,fd=105))
+== ufw ==
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+22/tcp                     LIMIT IN    192.168.56.1               # ssh from admin host
+80/tcp                     ALLOW IN    Anywhere                   # nginx http
+80/tcp (v6)                ALLOW IN    Anywhere (v6)              # nginx http
+
+== sshd ==
+maxauthtries 3
+permitrootlogin no
+passwordauthentication no
+allowusers mladmin
+== pending updates ==
+7
+== systemd score ==
+→ Overall exposure level for ml-api.service: 1.4 OK 🙂
+== lynis version ==
+3.0.9

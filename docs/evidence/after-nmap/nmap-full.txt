@@ -1,0 +1,11 @@
+# Nmap 7.991 scan initiated Wed Oct 14 04:22:36 2026 as: "C:\\Program Files (x86)\\Nmap\\nmap.exe" -sV -p- -T4 -oN nmap-full.txt 192.168.56.106
+Nmap scan report for bogon (192.168.56.106)
+Host is up (0.0010s latency).
+Not shown: 65533 filtered tcp ports (no-response)
+PORT   STATE SERVICE    VERSION
+22/tcp open  tcpwrapped
+80/tcp open  http       nginx
+MAC Address: 08:00:27:9F:A0:B9 (Oracle VirtualBox virtual NIC)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Oct 14 04:24:14 2026 -- 1 IP address (1 host up) scanned in 97.80 seconds

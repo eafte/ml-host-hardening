@@ -1,0 +1,12 @@
+# Nmap 7.991 scan initiated Wed Oct 14 04:32:35 2026 as: "C:\\Program Files (x86)\\Nmap\\nmap.exe" -p22 --script ssh-auth-methods -oN ssh-auth-final.txt 192.168.56.106
+Nmap scan report for bogon (192.168.56.106)
+Host is up (0.0010s latency).
+
+PORT   STATE SERVICE
+22/tcp open  ssh
+| ssh-auth-methods: 
+|   Supported authentication methods: 
+|_    publickey
+MAC Address: 08:00:27:9F:A0:B9 (Oracle VirtualBox virtual NIC)
+
+# Nmap done at Wed Oct 14 04:32:36 2026 -- 1 IP address (1 host up) scanned in 1.10 seconds

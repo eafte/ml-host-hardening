@@ -1,0 +1,9 @@
+# Nmap 7.991 scan initiated Wed Oct 14 04:24:46 2026 as: "C:\\Program Files (x86)\\Nmap\\nmap.exe" -p8000 -oN port8000.txt 192.168.56.106
+Nmap scan report for bogon (192.168.56.106)
+Host is up (0.0020s latency).
+
+PORT     STATE    SERVICE
+8000/tcp filtered http-alt
+MAC Address: 08:00:27:9F:A0:B9 (Oracle VirtualBox virtual NIC)
+
+# Nmap done at Wed Oct 14 04:24:48 2026 -- 1 IP address (1 host up) scanned in 1.97 seconds

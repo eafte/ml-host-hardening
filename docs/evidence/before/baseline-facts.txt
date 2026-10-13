@@ -1,0 +1,16 @@
+== listeners ==
+State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess                                                
+LISTEN 0      4096   127.0.0.53%lo:53        0.0.0.0:*    users:(("systemd-resolve",pid=539,fd=15))             
+LISTEN 0      4096         0.0.0.0:22        0.0.0.0:*    users:(("sshd",pid=941,fd=3),("systemd",pid=1,fd=162))
+LISTEN 0      2048         0.0.0.0:8000      0.0.0.0:*    users:(("uvicorn",pid=1652,fd=6))                     
+LISTEN 0      4096      127.0.0.54:53        0.0.0.0:*    users:(("systemd-resolve",pid=539,fd=17))             
+LISTEN 0      4096            [::]:22           [::]:*    users:(("sshd",pid=941,fd=4),("systemd",pid=1,fd=163))
+== ufw ==
+Status: inactive
+== sshd ==
+permitrootlogin without-password
+passwordauthentication yes
+== pending updates ==
+17
+== lynis version ==
+3.0.9
