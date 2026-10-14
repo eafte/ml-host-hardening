@@ -36,7 +36,7 @@ Two things did not improve and are reported honestly in later sections: Lynis st
 
 ## 4. Evidence layout
 
-All raw evidence is committed under `docs/evidence/`:
+All raw evidence is committed under [docs/evidence](/docs/evidence/):
 
 | Folder | Contents |
 |---|---|
